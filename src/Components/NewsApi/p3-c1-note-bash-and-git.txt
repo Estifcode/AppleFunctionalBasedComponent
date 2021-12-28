@@ -1,0 +1,220 @@
+Today's class 
+	Introduction of the phase
+
+	Introduction to Bash
+	Introduction to Git
+	- With out terminal  
+	- With terminal  
+
+Bash
+****
+
+	What is Bash and Why do we need it? 
+	***********************************
+		- Bash script is a very important tool to expedite your development process 
+
+		- The piping feature on bash is what makes it super special 
+
+		- You need to have a terminal to write bash script on 
+			- You can use the default terminal on Mac 
+			- Cygwin or gitbash can be used on Windows 
+
+	Cygwin64 
+	******** 
+		- install the software 
+			- https://cygwin.com/install.html
+
+		- To navigate to your Desktop directory 
+			cd /cygdeive/c/User/[username]/Desktop 
+
+		- To create short cut to desktop from home (~)
+			ln -s /cygdeive/c/User/[username]/Desktop
+
+	The main Bash commands you have to know 
+	*************************************** 
+
+		Please refer to this link for the list of common bash commands 
+			- https://www.educative.io/blog/bash-shell-command-cheat-sheet
+			
+			pwd — Print working directory
+			cd — Change directory (Double click)
+			ls — List directory contents (To view folders and files inside a directory)
+			mkdir — Create a directory (Right click and new folder)
+			touch — Creates a file (Right click new file)
+			echo — Prints text to the terminal window
+			mv — Move or rename directory (Right click rename)
+			rm — Remove directory (Right click delete)
+
+			grep — search
+			| — Pipe
+			chmod — Sets the file permissions
+			exit — Exit out of a directory
+			Crtl + C = To stop a running command 
+
+GIT 
+**** 
+
+	What is Git?
+	************
+
+		- Git is a Version Control System 
+		- There are multiple Version Control Systems, but Git is by far and large the most popular
+
+	Why Git & GitHub
+	****************  
+		- Git simplifies the process of working with other people and makes it easy to collaborate on projects. 
+		- Centralized storage of your code (Github) 
+		- Diffing makes git supper powerful and efficient
+		- The work flow that can be designed around git makes it the central part of every development team 
+			- Git work flow  
+				- Tracking 
+				- Forking 
+				- Merging 
+				- Cloning 
+				- Branching 
+
+
+	Creating your first repository on github
+	******************************************
+
+		- You need to have a github account for that 
+		- github.com
+
+		- Then you need to have a way to transfer files between your central repo and local development environment 
+			- For that, you can use the GitHub desktop software or Git commands on your terminal 
+
+	Git on Desktop 
+	*************** 
+		You can download and use the desktop App for that 
+			- https://desktop.github.com/
+
+			- Here is a very helpful tutorial for that 
+				- https://www.youtube.com/watch?v=ci3W1T88mzw
+
+	Git on the Terminal 
+	******************* 
+
+		Step 1: Download and install GIT 
+			- The easiest option would be to use git on VS Code. To be able to do that, add this extension on your VS code 
+				- https://code.visualstudio.com/docs/editor/github 
+
+			- For those of you on Windows, the other option would be to install gitbash. The git cli comes with it 
+
+				- https://gitforwindows.org/
+
+			- To check if git is working, run this command on your terminal 
+				- git --version 
+
+			- For those of you who are on Mac, the default terminal (zsh) comes with git pre-installed on it 				 
+
+		Step 2: 
+			- Get into the directory you want to control with git and initialize the git version controlling system 
+
+			- If you clone the project, that means it is already initiated 
+
+			Command: 
+				git init 
+
+				- This will create a .git folder where it saves the changes 
+
+		Step 3: 
+			- Configure your identity on the repository 
+
+			command: 
+				git config --global user.name '[Your name]'
+				git config --global user.email '[Your email]'
+
+				Add remote
+					git remote add https://github.com/evangadi/aug1st
+
+		Step 4: 
+
+			- Add the files you want to track to the staging area  
+
+			command: 
+
+			git add [file-name]
+			or 
+			git add . 
+
+			- To check what is added to the staging area use the status command 
+
+			command: 
+
+			git status 
+
+			- If you want to remove a file you added to the staging area, you can use the remove command 
+
+			git rm --cached [file-name]
+
+			the --cached key word allows you to remove files only from the index
+
+		Step 5: 
+
+			- Commit your change to the git repo 
+
+			command 
+
+			git commit -m "Note to help you remember the changes you made"
+
+			- Remember: the commit command only adds what is in the staging area to the git repo 
+
+		Step 6: 
+			
+			- Identify files you don't want to be tracked by git 
+
+			- All you need to do for this is, create a file called ".gitignore" and add all the files you want to be ignored in there. This could also be a folder 
+
+
+		Step 7: 
+			- Create a remote repository on github 
+				- If you don't have an account yet, create one 
+				- https://github.com/ 
+
+			- Create a repository on github 
+
+		Step 8: 
+
+			- Add the remote repo location to our local git 
+
+			command 
+
+			git remote add origin https://github.com/evangadi/class.git
+
+			- To check if it is added successfully, use command git remote 
+
+		Step 9: 
+
+			- Push whatever files and changes you made locally to the remote git repo 
+
+			command 
+
+			git push -u origin master
+
+			- That will ask you for your github credentials 
+
+		Step 10: 
+
+			- How can you take a project that is already on github and start working on it 
+
+			command 
+
+			git clone [git-repo-path]
+
+
+		Step 11: 
+
+			- To incorporate changes made by other developers, you need to first import their changes to your local directory 
+
+			command 
+
+			git pull 
+
+		Tutorials: 
+			https://dev.to/dhruv/essential-git-commands-every-developer-should-know-2fl
+
+			Git tutorial: 
+				- https://www.youtube.com/watch?v=SWYqp7iY_Tc
+
+
+
